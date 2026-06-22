@@ -191,7 +191,7 @@ for a in ACTUATORS:
     if f"val_{a}" not in st.session_state:
         st.session_state[f"val_{a}"] = 0 if a == "heater_power_cmd" else 0
 if "refresh_s" not in st.session_state:
-    st.session_state["refresh_s"] = 3
+    st.session_state["refresh_s"] = 1
 
 def apply_manual(act_name, is_manual, value):
     st.session_state[f"man_{act_name}"] = is_manual
