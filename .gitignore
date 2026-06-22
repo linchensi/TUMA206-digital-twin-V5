@@ -1,0 +1,21 @@
+# Secrets — NEVER commit real API keys or broker credentials
+.env
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Local runtime artifacts
+*.db
+*.db-journal
+historian*.db
+history_export.csv
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
