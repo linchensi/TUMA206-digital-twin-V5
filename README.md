@@ -17,7 +17,7 @@ A complete industrial digital twin of a beverage pasteurization and bottling lin
 | **`START_ALL.bat`** | Starts one local backend and the MQTT-connected HMI at `http://localhost:8501`, then opens both the local HMI and Community Cloud monitor |
 | `launchers/1_start_local.bat` | Starts only the plant/backend publisher |
 | `launchers/2_start_dashboard.bat` | Starts only the MQTT-connected HMI at `http://localhost:8501`; the backend must already be running |
-| `launchers/3_start_cloud.bat` | Opens the [Community Cloud monitor](https://beverage-digital-twin.streamlit.app/) |
+| `launchers/3_start_cloud.bat` | Opens the [Community Cloud monitor](https://dashboard-beverage-digital-twin.streamlit.app/) |
 
 > [!CAUTION]
 > Run **exactly one `local_backend.py` per `MQTT_TOPIC_PREFIX`**. Multiple backends publish different simulations to the same topic, causing tick values and alarms to flicker between states. Close old backend terminals before running `START_ALL.bat` again.
@@ -28,7 +28,7 @@ A complete industrial digital twin of a beverage pasteurization and bottling lin
 |------|-------------|--------|----------|------|
 | **Quick launch / local HMI** | `START_ALL.bat` → `http://localhost:8501` | `local_backend.py` runs the plant; HMI uses `RemoteEngineProxy` | Full controls, sent as MQTT commands | Yes |
 | **Standalone local demo** | `python -m streamlit run dashboard/app.py` | `SimulationEngine` runs inside Streamlit | Full direct controls | No, unless `USE_MQTT=1` |
-| **Cloud Monitor** | [beverage-digital-twin.streamlit.app](https://beverage-digital-twin.streamlit.app/) | No simulation; read-only MQTT subscriber | None | Yes |
+| **Cloud Monitor** | [beverage-digital-twin.streamlit.app](https://dashboard-beverage-digital-twin.streamlit.app/) | No simulation; read-only MQTT subscriber | None | Yes |
 | **Full Demo** | [tuma206mdi-beverage-digital-system.streamlit.app](https://tuma206mdi-beverage-digital-system.streamlit.app/) | Self-contained `SimulationEngine` | Full direct controls | No |
 
 > **Important:** The **Cloud Monitor** shows data ONLY when a local backend is running and publishing to the SAME MQTT broker. It does not run its own simulation. The **Full Demo** URL is a standalone showcase that runs its own engine — it does NOT connect to your local backend or upload data to the cloud monitor.
