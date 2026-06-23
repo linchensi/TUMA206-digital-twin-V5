@@ -290,7 +290,7 @@ Flow-adaptive gain compensates variable cooling load: >35 L/min→5.0, 20–35�
 
 ### S3 — Cooler PI with Pipe Transit
 
-Product cools passively in inter-stage pipe (~40% ΔT shed). HX inlet at 50–55°C. PI (gain 2.5) drives glycol valve. Manual authority: 0%→53°C, 10%→40°C alarm, AUTO~43%→25°C, 80%→22°C.
+Product cools passively in inter-stage pipe (≈40% ΔT shed). HX inlet at 50–55°C. PI (gain 2.5) drives glycol valve. Manual authority: 0%→53°C, 10%→40°C alarm, AUTO ≈43%→25°C, 80%→22°C.
 
 ### S4 — Filler Interlock + Flow-Driven Timing
 
